@@ -46,14 +46,13 @@
 
 	function showAll(){
 		document.getElementById("entirePage").style.display = "";
-		document.getElementById("kali").innerHTML = "root@kali:~#:\<span id=\"cursor\"\>\<\/span\>";
+		document.getElementById("kali").innerHTML = "root@kali:~#:<span id=\"cursor\">&nbsp;&#9608;</span>";
 		cursor = document.getElementById("cursor");
-			
-		setInterval(function(){ 
-			cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'visible' : 'hidden');				
-			}, 500);
+		setInterval(function(){
+			cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'hidden' : 'visible');
+		}, 500);
 	}
-	
+
 	</script>
   __                 _
  / _|               (_)
