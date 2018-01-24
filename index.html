@@ -25,8 +25,36 @@
 			}
 		</style>
 	</head>
-  	<body onload="setYear()">
+
+  	<body onload="setYear();typer();">
+		  <div id="entirePage" style=" display:none" >
         <pre>
+	<script>
+	var i = 0;
+
+	function typer(){
+		var text = 'famingolabs --info';
+		if (i < text.length) {
+			document.getElementById("kali").innerHTML += text.charAt(i);
+			i++;
+			setTimeout(typer, 100);
+		}
+		else{
+			showAll();
+		}
+	}
+
+	function showAll(){
+		document.getElementById("entirePage").style.display = "";
+		document.getElementById("kali").innerHTML = "root@kali:~#:\<span id=\"cursor\"\>\<\/span\>";
+		cursor = document.getElementById("cursor");
+			
+		setInterval(function(){ 
+			cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'visible' : 'hidden');				
+			}, 500);
+	}
+	
+	</script>
   __                 _
  / _|               (_)
 | |_  __ _ _ __ ___  _ _ __   __ _  ___
@@ -103,18 +131,10 @@
 							<br/>Michel(<a href="mailto:michel@famingolabs.com">michel@famingolabs.com</a>)
 						</p>
 		</div>
-		<div>
-			root@kali:~#: <span id="cursor">█</span>
+	</div>
+		<div id="kali">
+			root@kali:~#:
 		</div>
-
-		<script>
-			cursor = document.getElementById("cursor");
-			
-			setInterval(function(){ 
-				cursor.style.visibility = (cursor.style.visibility  == 'hidden' ? 'visible' : 'hidden');				
-			 }, 500);
-		
-		</script>
 
 		<!--Update your footer dawg!-->
         	<script type="text/javascript">
