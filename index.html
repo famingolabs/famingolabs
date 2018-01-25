@@ -5,6 +5,8 @@
 		<meta charset="UTF-8">
         <meta name="description" content="Making the world a better place. One commit at a time.">
 		<title>Famingo Labs</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="famingo.png"/>
 		<style>
   		body, html{
 				font-family: monospace;
@@ -26,34 +28,34 @@
 		</style>
 	</head>
 
-  	<body onload="setYear();typer();">
-		  <div id="entirePage" style=" display:none" >
-        <pre>
-	<script>
-	var i = 0;
+	<body onload="setYear();typer();">
+	  <div id="entirePage" style=" display:none" >
+			<script>
+				var i = 0;
 
-	function typer(){
-		var text = 'famingolabs --info';
-		if (i < text.length) {
-			document.getElementById("kali").innerHTML += text.charAt(i);
-			i++;
-			setTimeout(typer, 100);
-		}
-		else{
-			showAll();
-		}
-	}
+				function typer(){
+					var text = 'famingolabs --info';
+					if (i < text.length) {
+						document.getElementById("kali").innerHTML += text.charAt(i);
+						i++;
+						setTimeout(typer, 100);
+					}
+					else{
+						showAll();
+					}
+				}
 
-	function showAll(){
-		document.getElementById("entirePage").style.display = "";
-		document.getElementById("kali").innerHTML = "root@kali:~#:<span id=\"cursor\">&nbsp;&#9608;</span>";
-		cursor = document.getElementById("cursor");
-		setInterval(function(){
-			cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'hidden' : 'visible');
-		}, 500);
-	}
+				function showAll(){
+					document.getElementById("entirePage").style.display = "";
+					document.getElementById("kali").innerHTML = "root@kali:~#:<span id=\"cursor\">&nbsp;&#9608;</span>";
+					cursor = document.getElementById("cursor");
+					setInterval(function(){
+						cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'hidden' : 'visible');
+					}, 500);
+				}
 
-	</script>
+			</script>
+      <pre>
   __                 _
  / _|               (_)
 | |_  __ _ _ __ ___  _ _ __   __ _  ___
@@ -64,79 +66,73 @@
                              |___/
 
 -----------------------------------------
-        </pre>
-        <div>
-            <span>Created: February 7, 2017</span><br><br>
-            <table>
-                <tr>
-                    <td>Authors:&nbsp;</td>
-                    <td>Kevin Camellini (<a href="https://github.com/kcamcam">@kcamcam</a>)</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Michel Chatmajian (<a href="https://github.com/almiche">@almiche</a>)</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Justin Leger (<a href="https://github.com/jusleg">@jusleg</a>)</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>Kevin Zhang (<a href="https://github.com/izconcept">@izconcept</a>)</td>
-                </tr>
-            </table>
-            <p>
-                Version: 1.1 - "Bitconnneeeeeecctttt"<br><br>
-                Latest update: Jan 24, 2018
-                <br/>-----------------------------------------</br>
-            </p>
-            <table class="project">
-		<tr>
-                    <td><a href="https://conuhacks.io/">ConUHacks III</a>&nbsp;&nbsp;</td>
-                    <td>Don't know yet 🤷‍♂️ - ConUHacks III</td>
-                </tr>
-		<tr>
-                    <td><a href="https://rubygems.org/gems/quotifier">Quotifier Gem</a>&nbsp;&nbsp;</td>
-                    <td>Rack Middleware that inserts random quotes into outbound html being served from any Rack webserver</td>
-	    	</tr>
-		<tr>
-                    <td><a href="https://exambank.kcamel.com/">Exam Bank</a>&nbsp;&nbsp;</td>
-                    <td>Exam Bank for SOEN at Concordia</td>
-                </tr>
-		<tr>
-                    <td><a href="https://instantcena.ca">Instant Cena</a>&nbsp;&nbsp;</td>
-                    <td>You cannot see him</td>
-                </tr>
-		<tr>
-			<td><a href="https://devpost.com/software/storyflow">Story Flow</a>&nbsp;&nbsp;</td>
-			<td>Colaborative Instagram Stories - ConUHacks II</td>
-	    	</tr>
-                <tr>
-                    <td><a href="https://quotifier.ca">Quotifier</a>&nbsp;&nbsp;</td>
-                    <td>Automatically add meaningful comments to any code</td>
-                </tr>
-                <tr>
-                    <td><a href="https://kcamel.com/miniCalc.ca">MiniCalc</a>&nbsp;&nbsp;</td>
-                    <td>Gesture-based Apple Watch calculator</td>
-                </tr>
-            </table>
-            <br/><span id="yearfooter"></span> Famingo Labs. All rights reserved
-						<p>
-							Contact: <a href="mailto:hello@famingolabs.com">hello@famingolabs.com</a>
-							<br/>Twitter (<a href="https://twitter.com/FamingoLabs">@FamingoLabs</a>)
-							<br/>Justin(<a href="mailto:justin@famingolabs.com">just@famingolabs.com</a>)
-							<br/>Kevin Z(<a href="mailto:kevin.z@fmaingolabs.com">kevin.z@famingolabs.com</a>)
-							<br/>Kevin C(<a href="mailto:kevin.c@famingolabs.com">kevin.c@fmaingolabs.com</a>)
-							<br/>Michel(<a href="mailto:michel@famingolabs.com">michel@famingolabs.com</a>)
-						</p>
+	    </pre>
+	    <p>Created: February 7, 2017</p>
+	    <table>
+	      <tr>
+	        <td>Authors:&nbsp;</td>
+	        <td>Kevin Camellini (<a href="https://github.com/kcamcam">@kcamcam</a>)</td>
+	      </tr>
+	      <tr>
+	        <td></td>
+	        <td>Michel Chatmajian (<a href="https://github.com/almiche">@almiche</a>)</td>
+	      </tr>
+	      <tr>
+	        <td></td>
+	        <td>Justin Leger (<a href="https://github.com/jusleg">@jusleg</a>)</td>
+	      </tr>
+	      <tr>
+	        <td></td>
+	        <td>Kevin Zhang (<a href="https://github.com/izconcept">@izconcept</a>)</td>
+	      </tr>
+	    </table>
+      <p>Version: 1.1 - "Bitconnneeeeeecctttt"</p>
+			<p>Latest update: Jan 24, 2018</p>
+      <p>-----------------------------------------</p>
+      <table class="project">
+				<tr>
+          <td><a href="https://conuhacks.io/">ConUHacks III</a>&nbsp;&nbsp;</td>
+          <td>Don't know yet 🤷‍♂️ - ConUHacks III</td>
+				</tr>
+				<tr>
+          <td><a href="https://rubygems.org/gems/quotifier">Quotifier Gem</a>&nbsp;&nbsp;</td>
+          <td>Rack Middleware that inserts random quotes into outbound html being served from any Rack webserver</td>
+				</tr>
+				<tr>
+          <td><a href="https://exambank.kcamel.com/">Exam Bank</a>&nbsp;&nbsp;</td>
+          <td>Exam Bank for SOEN at Concordia</td>
+				</tr>
+				<tr>
+          <td><a href="https://instantcena.ca">Instant Cena</a>&nbsp;&nbsp;</td>
+          <td>You cannot see him</td>
+				</tr>
+				<tr>
+					<td><a href="https://devpost.com/software/storyflow">Story Flow</a>&nbsp;&nbsp;</td>
+					<td>Colaborative Instagram Stories - ConUHacks II</td>
+  			</tr>
+        <tr>
+          <td><a href="https://quotifier.ca">Quotifier</a>&nbsp;&nbsp;</td>
+          <td>Automatically add meaningful comments to any code</td>
+        </tr>
+        <tr>
+          <td><a href="https://kcamel.com/miniCalc.ca">MiniCalc</a>&nbsp;&nbsp;</td>
+          <td>Gesture-based Apple Watch calculator</td>
+        </tr>
+      </table>
+      <p><span id="yearfooter"></span> Famingo Labs. All rights reserved</p>
+			<p>Contact: <a href="mailto:hello@famingolabs.com">hello@famingolabs.com</a></p>
+			<p>Twitter (<a href="https://twitter.com/FamingoLabs">@FamingoLabs</a>)</p>
+			<p>Justin(<a href="mailto:justin@famingolabs.com">just@famingolabs.com</a>)</p>
+			<p>Kevin Z(<a href="mailto:kevin.z@fmaingolabs.com">kevin.z@famingolabs.com</a>)</p>
+			<p>Kevin C(<a href="mailto:kevin.c@famingolabs.com">kevin.c@fmaingolabs.com</a>)</p>
+			<p>Michel(<a href="mailto:michel@famingolabs.com">michel@famingolabs.com</a>)</p>
 		</div>
-	</div>
 		<div id="kali">
 			root@kali:~#:
 		</div>
 
 		<!--Update your footer dawg!-->
-        	<script type="text/javascript">
+  	<script type="text/javascript">
 			function setYear(){
 				var footer = document.getElementById("yearfooter");
 				var date = new Date();
@@ -152,6 +148,5 @@
 			ga('create', 'UA-96200578-1', 'auto');
 			ga('send', 'pageview');
 		</script>
-        	<!-- <script src="js/script.js"></script> -->
 	</body>
 </html>
