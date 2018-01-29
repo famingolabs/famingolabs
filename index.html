@@ -37,6 +37,7 @@
 					setTimeout(typer, 100);
 				}
 				else{
+					document.getElementById("cursor2").style.display = 'none';
 					pause();
 				}
 			}
@@ -46,16 +47,17 @@
 				}, 1500);
 			}
 			function showAll(){
+				cursor = document.getElementById("cursor");
 				document.getElementById("entirePage").style.display = "";
 				setInterval(function(){
 					cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'hidden' : 'visible');
 				}, 500);
-			} 
+			}
 
 		</script>
 	</head>
 	<body onload="setYear();typer();">
-		<span id="kali">root@kali:~#:</span>
+		<span id="kali">root@kali:~#:</span><span id="cursor2">&#9608;</span>
 		<!-- Entire page -->
 	  <div id="entirePage" style="display:none" >
       <pre>
