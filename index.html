@@ -26,35 +26,38 @@
 				height: 2em!important;
 			}
 		</style>
+		<script>
+			var i = 0;
+
+			function typer(){
+				var text = 'famingolabs --info';
+				if (i < text.length) {
+					document.getElementById("kali").innerHTML += text.charAt(i);
+					i++;
+					setTimeout(typer, 100);
+				}
+				else{
+					pause();
+				}
+			}
+			function pause(){
+				setTimeout(function(){
+					showAll();
+				}, 1500);
+			}
+			function showAll(){
+				document.getElementById("entirePage").style.display = "";
+				setInterval(function(){
+					cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'hidden' : 'visible');
+				}, 500);
+			}
+
+		</script>
 	</head>
-
 	<body onload="setYear();typer();">
-	  <div id="entirePage" style=" display:none" >
-			<script>
-				var i = 0;
-
-				function typer(){
-					var text = 'famingolabs --info';
-					if (i < text.length) {
-						document.getElementById("kali").innerHTML += text.charAt(i);
-						i++;
-						setTimeout(typer, 100);
-					}
-					else{
-						showAll();
-					}
-				}
-
-				function showAll(){
-					document.getElementById("entirePage").style.display = "";
-					document.getElementById("kali").innerHTML = "root@kali:~#:<span id=\"cursor\">&nbsp;&#9608;</span>";
-					cursor = document.getElementById("cursor");
-					setInterval(function(){
-						cursor.style.visibility = (cursor.style.visibility  == 'visible' ? 'hidden' : 'visible');
-					}, 500);
-				}
-
-			</script>
+		<span id="kali">root@kali:~#:</span>
+		<!-- Entire page -->
+	  <div id="entirePage" style="display:none" >
       <pre>
   __                 _
  / _|               (_)
@@ -86,13 +89,13 @@
 	        <td>Kevin Zhang (<a href="https://github.com/izconcept">@izconcept</a>)</td>
 	      </tr>
 	    </table>
-      <p>Version: 1.2 - "Bitconnneeeeeecctttt"</p>
-			<p>Latest update: Jan 25, 2018</p>
+      <p>Version: 1.3 - "Bitconnneeeeeecctttt"</p>
+			<p>Latest update: Jan 29, 2018</p>
       <p>-----------------------------------------</p>
       <table class="project">
 				<tr>
-          <td><a href="https://conuhacks.io/">ConUHacks III</a>&nbsp;&nbsp;</td>
-          <td>Don't know yet 🤷‍♂️ - ConUHacks III</td>
+					<td><a href="https://github.com/izconcept/Turnt">Turnt</a>&nbsp;&nbsp;</td>
+					<td>ConUHacks III - 🥇 First Place? These guys must fucks with the vision.<br /> Turnt is an IOT automated cocktail mixing device.</td>
 				</tr>
 				<tr>
           <td><a href="https://rubygems.org/gems/quotifier">Quotifier Gem</a>&nbsp;&nbsp;</td>
@@ -126,10 +129,12 @@
 			<p>Kevin Z(<a href="mailto:kevin.z@fmaingolabs.com">kevin.z@famingolabs.com</a>)</p>
 			<p>Kevin C(<a href="mailto:kevin.c@famingolabs.com">kevin.c@fmaingolabs.com</a>)</p>
 			<p>Michel(<a href="mailto:michel@famingolabs.com">michel@famingolabs.com</a>)</p>
+			<div id="kalilinux">
+				root@kali:~#:
+				<span id="cursor">&#9608;</span>
+			</div>
 		</div>
-		<div id="kali">
-			root@kali:~#:
-		</div>
+		<!-- End Entire page -->
 
 		<!--Update your footer dawg!-->
   	<script type="text/javascript">
